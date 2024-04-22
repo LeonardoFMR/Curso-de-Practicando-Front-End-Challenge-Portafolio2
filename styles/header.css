@@ -5,13 +5,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
 }
 
 .logo {
   background-color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2em;
+  
   margin-right: 2em; /* Ajusta el margen izquierdo para separar del bloque .logo */
   margin-left: 0%; /* Ajusta el margen izquierdo para separar del bloque .logo */
 
@@ -19,12 +21,15 @@ header {
 
 .logo__img {
   background-color: blue;
+  width: 40%; /* Ocupa el 40% del ancho disponible */
   height: 3em;
 }
 
 .menu__list {
   background-color: green;
   margin-left: 3em; /* Ajusta el margen izquierdo para separar del bloque .logo */
+  width: 60%; /* Ocupa el 60% del ancho disponible */
+
 }
 
 
