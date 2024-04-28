@@ -1,17 +1,15 @@
 header {
-  background-color: gray;
   height: 60px;
   padding: 0 2em;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
+  justify-content: flex-start;
+  gap: 10em;
 }
 
 .logo {
-  background-color: white;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 2em;
   
   margin-right: 2em; /* Ajusta el margen izquierdo para separar del bloque .logo */
@@ -20,40 +18,23 @@ header {
 }
 
 .logo__img {
-  background-color: blue;
-  width: 40%; /* Ocupa el 40% del ancho disponible */
   height: 3em;
 }
 
 .menu__list {
-  background-color: green;
-  margin-left: 3em; /* Ajusta el margen izquierdo para separar del bloque .logo */
-  width: 60%; /* Ocupa el 60% del ancho disponible */
-
+  margin-left: 5em; /* Ajusta el margen izquierdo para separar del bloque .logo */
+  gap: 1em;
 }
 
 
 .menu__list li a {
-  background-color: pink;
   color:blue;
 }
-
-
-/*Sección Menu*/
- /* REVISIÓN
-section.menu{
-  background-color: blue;
-} REVISIÓN */
   
 .menu__list {
   display: flex;
 }
-  
-.menu__header {
-  display: flex; /* Utiliza flexbox */
-  align-items: center; /* Centra verticalmente los elementos */
-  background-color: green;
-}
+ 
   
 .menu__header img {
   margin-right: 10px; /* Agrega un espacio entre la imagen y el texto */
@@ -62,33 +43,65 @@ section.menu{
   
 /*Sección Title*/
 section.title{
-  background-color: green;
+
   display: flex; /* Inicia flexbox en el contenedor */
-  padding: 0; /* Elimina el relleno de la lista */
+  justify-content: flex-start;
+  width: 100%;
+  gap: 3em;
+  margin-left: 1em;
+}   
+
+.title__bio {
+  font-family: Raleway;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 25.83px;
+  text-align: left;
 }
-  
+ 
+.title__subsection {
+  font-family: Raleway;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 16.44px;
+  text-align: left;
+  margin-top: 1em;
+}
+
+
 .title__profile {  
   border-radius: 50%; /* Hace que la imagen tenga bordes redondeados, creando un círculo */
+  max-width: 20%; /* Limita el ancho máximo de la imagen al 50% del contenedor */
 }
-  
 
+
+  
+.menu__item--contato a {
+  font-weight: bold; /* Ajusta el peso de la fuente para que aparezca en negrita */
+}
  
 /* Estilos para los elementos de la red social */
 .title__network {
   display: flex; /* Inicia flexbox en el contenedor */
-  list-style: none; /* Elimina los estilos de la lista */
-  padding: 0; /* Elimina el relleno de la lista */
+  align-items: center;
+  gap: 3em;
+  margin-top: 1em;
+  margin-left: 2em;
 }
 
-.title__network__item {
-  margin-right: 10px; /* Agrega un espacio entre cada elemento */
+.presentacion{
+  display: flex; /* Inicia flexbox en el contenedor */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  gap: 1em;
 }
 
 /*Tablet*/
 @media (max-width: 1024px) {
   header {
-    padding: 20px 100px;     
-    flex-direction: column; 
+    gap: 0;
   }
 
   .logo {
@@ -98,13 +111,17 @@ section.title{
     
   /* Menú */
   .menu__list {
-    background-color: greenyellow;
     display: flex;
     flex-direction: row;
-    font-size: 16px;
-    gap: 10px;
+    font-size: 14px;
+    margin-left: 1em; /* Ajusta el margen izquierdo para separar del bloque .logo */
+    gap: 1em;
   }
     
+
+  .title__network {
+  gap: 2em;  
+  }
 }
 
 
@@ -112,27 +129,21 @@ section.title{
 /*Mobile*/
 @media (max-width: 425px) {
   /* Menú */
-
+  header {
+    gap: 5em;
+  }
   
 
-  .logo {
-    background-color: red;
+  .menu__list {
+    font-size: 11px;
   }
+    
   .menu__list li:not(:last-child) {  /* Ocultar todos los elementos de la lista del menú excepto el último hijo */
       display: none;
   }
 
-  .menu__list li:last-child {
-    margin-left: auto; /* Puedes ajustar este valor según tu diseño */
-  }
-
-
   /*title*/
-  .title__profile {
-    width: 98px;
-    height: 98px;
-    position: relative;
-  }
+ 
 
   /* Estilos para el elemento de contacto en la esquina superior derecha */
   .menu__item--contato {
@@ -142,6 +153,7 @@ section.title{
     margin-right: 10px; /* Ajustar el margen para que no se solape con otros elementos */
   }
 
+  
   .menu__list {
     display: flex;
   }
@@ -150,5 +162,35 @@ section.title{
     margin-right: 10px; /* Agregar un espacio entre cada elemento del menú */
   }
 
+  .presentacion{
+    flex-direction: row-reverse;   
+    gap: 0.2em;
+  }
+
+  .title__profile {  
+    max-width: 30%; /* Limita el ancho máximo de la imagen al 50% del contenedor */
+    margin-right: 1em;
+  }
+  
+  .title__bio {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 25.83px;
+  }
+   
+  .title__subsection {
+    font-size: 0.8em;
+    font-weight: 200;
+    line-height: 16.44px;
+  }
+  
+  
+  .title__network {
+    gap: 0.5em;  
+    margin-left: 2%;
+    font-size: 0.8em;
+    }
+
+    
 }
 

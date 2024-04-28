@@ -1,197 +1,91 @@
-:root{
-    --colr-de-fundo: #F5F5F5;
-    --cor-de-link: #000;
-    --cor-de-azul: #EAF2FD;
- }
- 
- body {
-     box-sizing: border-box;
-     background-color: var(--cor-de-fundo) ;
-     font-family: 'Raleway';
-     margin: 0;
-     padding: 0;
-     line-height: 1;
- }
- ol, ul,li {
-     list-style: none;
- }
- a{
-     text-decoration: none;
-     color: var(--cor-de-link);
- }
- 
- /*Sección Menu*/
- 
- section.menu{
- background-color: red;
- }
- 
- .menu__list {
-     display: flex;
- }
- 
- .menu__header {
-     display: flex; /* Utiliza flexbox */
-     align-items: center; /* Centra verticalmente los elementos */
-     background-color: green;
- }
- 
- .menu__header img {
-     margin-right: 10px; /* Agrega un espacio entre la imagen y el texto */
- }
- 
- 
- /*Sección Title*/
- section.title{
- background-color: blue;
- display: flex; /* Inicia flexbox en el contenedor */
- padding: 0; /* Elimina el relleno de la lista */
- }
- 
- .title__profile {
- 
-     border-radius: 50%; /* Hace que la imagen tenga bordes redondeados, creando un círculo */
- }
- 
- 
- /* Estilos para los elementos de la red social */
- .title__network {
-     display: flex; /* Inicia flexbox en el contenedor */
-     list-style: none; /* Elimina los estilos de la lista */
-     padding: 0; /* Elimina el relleno de la lista */
- }
- 
- .title__network__item {
-     margin-right: 10px; /* Agrega un espacio entre cada elemento */
- }
- 
- /*Sección About*/
- 
- 
- section.about{
- background-color: purple;
- text-align: center; /* Alinea el texto al centro */
- 
- }
- 
- /*Sección Hobbies*/
- 
- section.skills{
-     background-color: red;
-     text-align: center; /* Alinea el texto al centro */
- }
- 
- .skills__line{
-     background-color: aqua;
-     display: flex; /* Inicia flexbox en el contenedor */
-     padding: 0; /* Elimina el relleno de la lista */
-     flex-wrap: wrap; /* Envuelve los elementos en varias líneas si es necesario */
-     margin: 0% 2%; /* Reducir el margen superior e inferior y el margen izquierdo y derecho */
- 
- }
- 
- .skills__box {
-     background-color: maroon;
-     flex: 1 0 auto; /* Establece el factor de flexibilidad y deshabilita la contracción */
-     margin: 10px; /* Ajusta el margen entre las cajas flexibles */
-     max-width: calc(33.33%); /* Establece el ancho máximo de las cajas flexibles en 33.33% del contenedor menos el margen */
-     box-sizing: border-box; /* Incluye el ancho del borde y el relleno en el cálculo del ancho */
- }
- 
- 
- /*Sección Hobbies*/
- 
- section.hobbies{
-     background-color: yellow;
-  
- }
- 
- 
- 
- /* Experiencia Académica*/
- 
- section.academic{
- background-color: aquamarine;
- 
- }
- 
- /* experiencia*/
- 
- section.experience{
- background-color: green;
- }
- 
- /*Contacto*/
- 
- section.formcontato{
- background-color: silver;
- }
- 
- /*footeer*/
- 
- section.footer{
-    background-color: magenta;
- }
- 
- /* Vamos a desafiarnos trabajando con responsividad?
- Utiliza las referencias de los breakpoints @media abajo */
- 
- 
- /*Tablet*/
- @media (max-width: 768px) {
- 
- /* Menú */
- 
- /*title*/
- 
- /*Skills*/
- .skills__box {
-     max-width: calc(50%); /* Establece el ancho máximo de las cajas flexibles en 50% del contenedor menos el margen */
- }
- /*Hobbies*/
- 
- /*Formación Académica*/
- 
- /*Experiencia Profesional*/
- 
- }
- 
- /*Mobile*/
- @media (max-width: 425px) {
-     /* Menú */
-     .menu__list li:not(:last-child) {  /* Ocultar todos los elementos de la lista del menú excepto el último hijo */
-         display: none;
-     }
- 
-     /*title*/
-     .title__profile {
-         width: 98px;
-         height: 98px;
-         position: relative;
-     }
- 
-     /* Estilos para el elemento de contacto en la esquina superior derecha */
-     .menu__item--contato {
-         position: absolute;
-         top: 1em;
-         right: 0;
-         margin-right: 10px; /* Ajustar el margen para que no se solape con otros elementos */
-     }
- 
-     .menu__list {
-         display: flex;
-     }
- 
-     .menu__item {
-         margin-right: 10px; /* Agregar un espacio entre cada elemento del menú */
-     }
-     /*Skills*/
-     .skills__box {
-         max-width: calc(100% ); /* Establece el ancho máximo de las cajas flexibles en 50% del contenedor menos el margen */
-     }
-     /*Hobbies*/
- 
-     /*Formación Académica*/
- 
-     /*Experiencia Profesional*/
- }
+
+
+            
+
+    <!-- Sección de Experiencia Profesional/Proyectos-->
+    <section class="experience" id="xp">
+        <h2 class="experience__section__title" >Projects</h2>
+        <div class="experiencie__box">
+            <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
+            <img class="experience__img" src="assets\decod_print.png">
+            <div class="experience__info"
+                <h2 class="experience__title">Encriptador de texto</h2>
+                <h3 class="experience__text">Challenge Alura Codificador </h3>
+                    <div class="experience__description">
+                        <!-- Pon el enlace del proyecto en Github o GithubPages -->
+                            <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-encriptador-latam"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                    </div>
+            </div>
+        </div>  
+
+        <div class="experiencie__box">
+            <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
+            <img class="experience__img" src="assets\forca_print.png">
+            <div class="experience__info"
+                <h2 class="experience__title">Juego creado con HTML y JavaScript</h2>
+                <h3 class="experience__text">Challenge Oracle </h3>
+                    <div class="experience__description">
+                        <!-- Pon el enlace del proyecto en Github o GithubPages -->
+                            <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-juego-ahorcado"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                    </div>
+            </div>
+        </div>  
+
+        <div class="experience__box">
+            <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
+            <img class="experience__img" src="assets\secretcode_print.png">
+            <div class="experience__info-container"
+                <h2 class="experience__title">Encriptador de texto</h2>
+                <h3 class="experience__text">Challenge Oracle </h3>
+                    <div class="experience__description">
+                            <!-- Pon el enlace del proyecto en Github o GithubPages -->
+                            <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-encriptador-latam"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                    </div>
+            </div>
+        </div>  
+
+        <div class="experience__box">
+            <img class="experience__img" src="assets\forca2_print.png">
+            <div class="experience__info-container"
+            <h2 class="experience__title">Juego creado con HTML, CSS y JavaScript</h2>
+                <h3 class="experience__text">Challenge Oracle </h3>
+                    <div class="experience__description">
+                            <!-- Pon el enlace del proyecto en Github o GithubPages -->
+                            <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-juego-ahorcado"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                    </div>
+        </div>
+        </div>  
+
+        <!-- Sección de Contacto -->
+        <section class="formcontato" id="contacto">
+            <div  class="formcontato__contacto">
+                <div class="formcontato--esquerda">
+                    <img class="formcontato__img" src="assets\contact_image.png">
+                </div>
+                <div class="formcontato__text">
+                    <h2 class="formcontato__title">Contacto</h2>
+                    <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
+                    <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
+                    <form class="formcontato__form" name="form">
+                        <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
+                        <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
+                        <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto">
+                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
+                        <button type="submit" class="formcontato__botao">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Footer -->
+        <section class="footer">
+            <div class="footer__rodape">
+                <p>Desarrollado por Leonardo Morales</p>
+                <p>2022</p>
+            </div>
+        </section>
+    </div>

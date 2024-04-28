@@ -21,7 +21,7 @@ body { background-color: #F5F5F5;
     font-family: "Raleway";
     color: #464646;
     overflow-x: hidden;  /* Oculta el scroll del eje principal horizontal */
-    }
+}
 
 main {
     display: flex;
@@ -29,4 +29,3 @@ main {
     align-items: center;
 }
 
- 
